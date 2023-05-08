@@ -1,26 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Open Library API Demo</title>
+    <title>ITandDDP Book Library</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <h1>Open Library API Demo</h1>
-    <form>
-        <label for="search">Search for a Book:</label>
-        <input type="text" id="search" name="search">
-        <button type="submit">Search</button>
-    </form>
-    <hr>
-    <h2 id="title"></h2>
-    <h3 id="author"></h3>
-    <img id="cover" src="">
-    <p id="description"></p>
-    <h4>Text:</h4>
-    <div id="text"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__row">
+                <div class="header__col">
+                    <nav class="header__navigation navigation">
+                        <a href="#" class="main-btn navigation__item">Books</a>
+                        <a href="#" class="main-btn navigation__item">Favorite</a>
+                    </nav>
+                </div>
+                <div class="header__col">
+                    <nav class="header__authorization authorization">
+                        <a href="#" class="main-btn authorization__item">Log In</a>
+                        <a href="#" class="main-btn authorization__item">Sign Up</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main style="padding-top: 70px;">
+        <div class="container">
+            <div class="books">
+                <div class="books__wrapper">
+                    <div class="books__cards">
+                        <!-- <section class="books__card card">
+                            <div class="card__row">
+                                <div class="card__col">
+                                    <div class="card__image">
+                                        <img src="images/card__image.png" alt="Book preview">
+                                    </div>
+                                </div>
+                                <div class="card__col">
+                                    <div class="text-wrap">
+                                        <div class="card__title">Современные операционные системы</div>
+                                        <div class="card__author">Э. Таненбаум<br>Х. Бос</div>
+                                        <article class="card__description">Это с нетерпением ожидаемое, переработанное и
+                                            исправленное издание всемирного бестселлера включает в себя сведения о
+                                            последних достижениях в области технологий операционных систем. Книга
+                                            построена на примерах и содержит информацию, необходимую для понимания
+                                            функционирования современных операционных систем. Новое издание существенно
+                                            изменено и дополнено, и включает описание устройства и функционирования
+                                            Windows Vista. Благодаря практическому опыту, приобретенному при разработке
+                                            нескольких операционных систем, и высокому уровню знания предмета Эндрю
+                                            Таненбаум смог ясно и увлекательно рассказать о сложных вещах. В книге
+                                            приводится множество важных подробностей, которых нет ни в одном другом
+                                            издании.</article>
+                                    </div>
+                                    <div class="buttons-wrap">
+                                        <button class="card__favourite">
+                                            <img src="images/star-tr-icon.svg" alt="Like">
+                                        </button>
+                                        <button class="card__read">Read</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="books__card card">
+                            <div class="card__row">
+                                <div class="card__col">
+                                    <div class="card__image">
+                                        <img src="images/card__image.png" alt="Book preview">
+                                    </div>
+                                </div>
+                                <div class="card__col">
+                                    <div class="text-wrap">
+                                        <div class="card__title">Современные операционные системы</div>
+                                        <div class="card__author">Э. Таненбаум<br>Х. Бос</div>
+                                        <article class="card__description">Это с нетерпением ожидаемое, переработанное и
+                                            исправленное издание всемирного бестселлера включает в себя сведения о
+                                            последних достижениях в области технологий операционных систем. Книга
+                                            построена на примерах и содержит информацию, необходимую для понимания
+                                            функционирования современных операционных систем. Новое издание существенно
+                                            изменено и дополнено, и включает описание устройства и функционирования
+                                            Windows Vista. Благодаря практическому опыту, приобретенному при разработке
+                                            нескольких операционных систем, и высокому уровню знания предмета Эндрю
+                                            Таненбаум смог ясно и увлекательно рассказать о сложных вещах. В книге
+                                            приводится множество важных подробностей, которых нет ни в одном другом
+                                            издании.</article>
+                                    </div>
+                                    <div class="buttons-wrap">
+                                        <button class="card__favourite">
+                                            <img src="images/star-tr-icon.svg" alt="Like">
+                                        </button>
+                                        <button class="card__read">Read</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="books__card card">
+                            <div class="card__row">
+                                <div class="card__col">
+                                    <div class="card__image">
+                                        <img src="images/card__image.png" alt="Book preview">
+                                    </div>
+                                </div>
+                                <div class="card__col">
+                                    <div class="text-wrap">
+                                        <div class="card__title">Современные операционные системы</div>
+                                        <div class="card__author">Э. Таненбаум<br>Х. Бос</div>
+                                        <article class="card__description">Это с нетерпением ожидаемое, переработанное и
+                                            исправленное издание всемирного бестселлера включает в себя сведения о
+                                            последних достижениях в области технологий операционных систем. Книга
+                                            построена на примерах и содержит информацию, необходимую для понимания
+                                            функционирования современных операционных систем. Новое издание существенно
+                                            изменено и дополнено, и включает описание устройства и функционирования
+                                            Windows Vista. Благодаря практическому опыту, приобретенному при разработке
+                                            нескольких операционных систем, и высокому уровню знания предмета Эндрю
+                                            Таненбаум смог ясно и увлекательно рассказать о сложных вещах. В книге
+                                            приводится множество важных подробностей, которых нет ни в одном другом
+                                            издании.</article>
+                                    </div>
+                                    <div class="buttons-wrap">
+                                        <button class="card__favourite">
+                                            <img src="images/star-tr-icon.svg" alt="Like">
+                                        </button>
+                                        <button class="card__read">Read</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="books__card card">
+                            <div class="card__row">
+                                <div class="card__col">
+                                    <div class="card__image">
+                                        <img src="images/card__image.png" alt="Book preview">
+                                    </div>
+                                </div>
+                                <div class="card__col">
+                                    <div class="text-wrap">
+                                        <div class="card__title">Современные операционные системы</div>
+                                        <div class="card__author">Э. Таненбаум<br>Х. Бос</div>
+                                        <article class="card__description">Это с нетерпением ожидаемое, переработанное и
+                                            исправленное издание всемирного бестселлера включает в себя сведения о
+                                            последних достижениях в области технологий операционных систем. Книга
+                                            построена на примерах и содержит информацию, необходимую для понимания
+                                            функционирования современных операционных систем. Новое издание существенно
+                                            изменено и дополнено, и включает описание устройства и функционирования
+                                            Windows Vista. Благодаря практическому опыту, приобретенному при разработке
+                                            нескольких операционных систем, и высокому уровню знания предмета Эндрю
+                                            Таненбаум смог ясно и увлекательно рассказать о сложных вещах. В книге
+                                            приводится множество важных подробностей, которых нет ни в одном другом
+                                            издании.</article>
+                                    </div>
+                                    <div class="buttons-wrap">
+                                        <button class="card__favourite">
+                                            <img src="images/star-tr-icon.svg" alt="Like">
+                                        </button>
+                                        <button class="card__read">Read</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"></footer>
     <script src="main.js"></script>
 </body>
 
